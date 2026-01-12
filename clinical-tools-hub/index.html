@@ -51,8 +51,9 @@
     color: #333;
   }
 
-  /* Single source of truth for ALL hub buttons */
-  .tool a {
+  /* One unified “button” look for BOTH <a> and <button> */
+  .tool a,
+  .tool button.toolbtn {
     display: inline-block;
     padding: 10px 16px;
     background: #005eb8;
@@ -60,9 +61,13 @@
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
+    border: none;
+    cursor: pointer;
+    font: inherit;
   }
 
-  .tool a:hover {
+  .tool a:hover,
+  .tool button.toolbtn:hover {
     background: #003f87;
   }
 
@@ -94,18 +99,13 @@
 </style>
 
 <script>
-  // ✅ Single reliable handler: open tool in a new tab AND keep hub in place.
-  function openTool(evt, url){
+  // Opens in new tab; if blocked, falls back to same-tab.
+  function openTool(url){
     try{
-      if(evt) evt.preventDefault(); // stop same-tab navigation
       const w = window.open(url, "_blank", "noopener");
-      // If a popup blocker blocks it, fall back to same-tab (still works, doesn’t break).
-      if(!w) window.location.href = url;
-      return false;
+      if(!w) window.location.href = url; // popup blocked fallback
     } catch(e){
-      // Hard fallback (never break)
       window.location.href = url;
-      return false;
     }
   }
 </script>
@@ -130,11 +130,11 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     <strong>non-valvular atrial fibrillation</strong>, using structured, guideline-aligned prompts.
     Designed to support balanced, conservative decision-making where bleeding risk or uncertainty exists.
   </p>
-  <!-- ✅ JS-only new-tab: prevents double-open -->
-  <a href="https://pf-clinical-tools.github.io/nvaf-anticoagulation/"
-     onclick="return openTool(event,'https://pf-clinical-tools.github.io/nvaf-anticoagulation/');">
+  <!-- ✅ Button cannot navigate the hub tab -->
+  <button type="button" class="toolbtn"
+          onclick="openTool('https://pf-clinical-tools.github.io/nvaf-anticoagulation/');">
     Open Anticoagulation Risk Assessment Tool (NVAF)
-  </a>
+  </button>
 </div>
 
 <div class="tool">
@@ -144,11 +144,11 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     echocardiographic parameters, with emphasis on <strong>confidence estimation and clinical context</strong>.
     Intended for clinicians assessing unexplained dyspnoea or suspected heart failure.
   </p>
-  <!-- ✅ JS-only new-tab: prevents double-open -->
-  <a href="https://pf-clinical-tools.github.io/diastolic-dysfunction/"
-     onclick="return openTool(event,'https://pf-clinical-tools.github.io/diastolic-dysfunction/');">
+  <!-- ✅ Button cannot navigate the hub tab -->
+  <button type="button" class="toolbtn"
+          onclick="openTool('https://pf-clinical-tools.github.io/diastolic-dysfunction/');">
     Open Diastolic Dysfunction Assessment Tool
-  </a>
+  </button>
 </div>
 
 <div class="tool">
@@ -158,11 +158,11 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     catheterisation and <strong>trial without catheter (TWOC)</strong> in patients with femoral or pelvic fractures.
     Focuses on minimising unnecessary catheter use while reducing catheter-associated harm.
   </p>
-  <!-- ✅ JS-only new-tab: prevents double-open -->
-  <a href="https://pf-clinical-tools.github.io/catheter-twoc-femoral-pelvic/"
-     onclick="return openTool(event,'https://pf-clinical-tools.github.io/catheter-twoc-femoral-pelvic/');">
+  <!-- ✅ Button cannot navigate the hub tab -->
+  <button type="button" class="toolbtn"
+          onclick="openTool('https://pf-clinical-tools.github.io/catheter-twoc-femoral-pelvic/');">
     Open Catheterisation &amp; TWOC Decision Aid
-  </a>
+  </button>
 </div>
 
 <div class="tool">
@@ -172,8 +172,8 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     in patients with acute pulmonary embolism or deep vein thrombosis who require urgent femoral fracture surgery.
     Designed to support multidisciplinary peri-operative decision-making.
   </p>
-  <!-- Leave as placeholder for now; JS would hide the problem -->
-  <a href="PASTE_PEDVT_TOOL_LINK_HERE">
+  <!-- Leave placeholder as a normal link so you can detect it's not set yet -->
+  <a href="PASTE_PEDVT_TOOL_LINK_HERE" target="_blank" rel="noopener">
     Open Peri-operative PE / DVT Decision Support Tool
   </a>
 </div>
@@ -232,4 +232,3 @@ Clinical Decision Support Tools – Hub v1.1<br>
 </div>
 </body>
 </html>
-
