@@ -29,8 +29,18 @@
     background: #fff3cd;
     border-left: 5px solid #ffcc00;
     padding: 12px 15px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-size: 0.95em;
+  }
+
+  .popupNote{
+    display:none;
+    background:#fdecea;
+    border-left:5px solid #b42318;
+    padding:12px 15px;
+    margin-bottom:24px;
+    font-size:0.95em;
+    color:#4a0d0d;
   }
 
   .tool {
@@ -51,7 +61,7 @@
     color: #333;
   }
 
-  /* Same look for BOTH <a> and <button> so appearance stays consistent */
+  /* Same look for BOTH <a> and <button> */
   .tool a,
   .tool button.toolbtn {
     display: inline-block;
@@ -99,14 +109,19 @@
 </style>
 
 <script>
-  // Opens in new tab; if blocked, falls back to same-tab.
-  // (Crucially: tool launches are buttons, so the hub cannot navigate away.)
+  // Open tool in a new tab.
+  // IMPORTANT: We do NOT navigate the hub tab under any circumstances.
   function openTool(url){
-    try{
-      const w = window.open(url, "_blank", "noopener");
-      if(!w) window.location.href = url; // popup blocker fallback
-    } catch(e){
-      window.location.href = url;
+    const w = window.open(url, "_blank", "noopener");
+    if(!w){
+      // Popup/new-tab blocked. Keep hub open and show a clear message.
+      const note = document.getElementById("popupNote");
+      if(note){
+        note.style.display = "block";
+        note.innerHTML =
+          'Your browser blocked opening a new tab. ' +
+          'Please allow pop-ups for <b>pf-clinical-tools.github.io</b> (or hold Ctrl / right-click and choose “Open link in new tab”).';
+      }
     }
   }
 </script>
@@ -123,6 +138,8 @@ These tools are designed to <strong>support clinical decision-making</strong> an
 They <strong>do not replace clinical judgement</strong>, local policy, or specialist advice.
 Use within appropriate clinical governance frameworks and escalate where uncertainty or patient-specific factors exist.
 </div>
+
+<div id="popupNote" class="popupNote"></div>
 
 <div class="tool">
   <h2>1. Anticoagulation Risk Assessment Tool in NVAF</h2>
@@ -170,7 +187,6 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     in patients with acute pulmonary embolism or deep vein thrombosis who require urgent femoral fracture surgery.
     Designed to support multidisciplinary peri-operative decision-making.
   </p>
-  <!-- Keep as a normal link until you have the real URL -->
   <a href="PASTE_PEDVT_TOOL_LINK_HERE" target="_blank" rel="noopener">
     Open Peri-operative PE / DVT Decision Support Tool
   </a>
