@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Diastolic Dysfunction Bedside Tool — Governance, Methods & Evidence (v1.0 locked)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    margin:0;
+    background:#f7f8fa;
+    color:#111;
+    line-height:1.6;
+  }
+  .container{
+    max-width:900px;
+    margin:auto;
+    padding:28px 20px;
+    background:#fff;
+    box-shadow:0 1px 3px rgba(0,0,0,0.08);
+  }
+  h1{ font-size:1.9em; margin:0 0 .2em; }
+  h2{ font-size:1.4em; margin-top:1.7em; }
+  h3{ font-size:1.15em; margin-top:1.2em; }
+  p{ margin:.8em 0; }
+  ul{ margin:.4em 0 .9em 1.2em; }
+  table{ width:100%; border-collapse:collapse; margin:1em 0; }
+  th,td{ border:1px solid #ccc; padding:8px 10px; vertical-align:top; }
+  th{ background:#f1f3f6; text-align:left; }
+  .meta{
+    background:#fff3cd;
+    border-left:5px solid #ffcc00;
+    padding:12px 15px;
+    margin:16px 0 22px;
+    font-size:.95em;
+  }
+  .small{ font-size:.95em; color:#333; }
+  footer{
+    margin-top:36px;
+    padding-top:14px;
+    border-top:1px solid #ddd;
+    font-size:.9em;
+    color:#555;
+  }
+  .hr{ height:1px; background:#e6eaf0; margin:18px 0; }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Diastolic Dysfunction Bedside Decision Support Tool</h1>
+<p><strong>A multiparametric, conservative framework for echocardiographic interpretation</strong></p>
+
+<div class="meta">
+<strong>Status:</strong> Complete locked fallback governance document (v1.0).<br>
+This page is provided for governance, transparency, and audit. It does not replace clinical judgement or formal echocardiography reporting.
+</div>
+
+<div class="hr"></div>
+
+<h2>1. Introduction</h2>
+
+<p>Diastolic dysfunction is a major contributor to symptoms of heart failure in patients with preserved or mildly reduced left ventricular ejection fraction (LVEF). Impaired myocardial relaxation, reduced ventricular compliance, and abnormal ventricular–atrial coupling result in elevation of left ventricular filling pressures, leading to exertional dyspnoea, pulmonary congestion, and exercise intolerance despite apparently preserved systolic function. Echocardiography is the principal non-invasive modality for evaluating these processes; however, interpretation of diastolic function is recognised to be complex, context-dependent, and subject to substantial inter-observer variability.¹–³</p>
+
+<p>International guideline recommendations emphasise that no single echocardiographic parameter reliably reflects left ventricular filling pressure across all clinical contexts.¹,⁴ Instead, a <strong>multiparametric approach</strong> integrating concordant findings is required. In routine clinical practice, echocardiographic datasets are frequently incomplete, qualitative, or discordant, making bedside interpretation challenging for non-specialists. Over-simplification risks false certainty, while excessive technical detail may impair clinical usability.</p>
+
+<p>The Diastolic Dysfunction Bedside Decision Support Tool was developed to address this gap. It does not redefine diagnostic criteria; rather, it provides a <strong>transparent, conservative, and explainable framework</strong> for integrating echocardiographic data, explicitly acknowledging uncertainty, missing information, and the physiological context in which measurements were acquired.</p>
+
+<h2>2. Purpose of the Tool</h2>
+
+<p>The purpose of the tool is to:</p>
+
+<ul>
+  <li>Support structured interpretation of echocardiographic parameters relevant to diastolic function</li>
+  <li>Estimate <strong>resting left atrial pressure (LAP) physiology</strong> using a conservative multiparametric approach</li>
+  <li>Report diastolic grade <strong>only where grading is methodologically appropriate</strong></li>
+  <li>Provide an explicit <strong>degree of confidence</strong> based on data quality, concordance, and acquisition context</li>
+</ul>
+
+<p>The tool is <strong>not intended</strong> to:</p>
+
+<ul>
+  <li>Diagnose heart failure with preserved ejection fraction (HFpEF)</li>
+  <li>Replace formal echocardiography reporting</li>
+  <li>Substitute for invasive haemodynamic assessment</li>
+  <li>Mandate or automate clinical management decisions</li>
+</ul>
+
+<p>Clinical judgement and contextual assessment remain essential.</p>
+
+<h2>3. Intended Audience and Scope of Use</h2>
+
+<h3>Intended audience</h3>
+
+<ul>
+  <li>Cardiologists and heart failure specialists</li>
+  <li>Acute and general physicians</li>
+  <li>Advanced echocardiography practitioners and physiologists</li>
+  <li>Clinicians participating in multidisciplinary team (MDT) discussions</li>
+</ul>
+
+<h3>Intended settings</h3>
+
+<ul>
+  <li>Inpatient wards</li>
+  <li>Outpatient clinics</li>
+  <li>MDT review and longitudinal patient assessment</li>
+</ul>
+
+<h3>Scope clarification (critical)</h3>
+
+<p>This tool <strong>does not guide echocardiographic image acquisition or measurement</strong>. It supports interpretation <strong>only of echocardiographic parameters that have already been acquired, validated, and formally reported</strong> by appropriately trained practitioners.</p>
+
+<p>Importantly, <strong>scope exclusions relate to the physiological context at the time echocardiographic parameters were acquired, not to the patient’s current clinical state.</strong></p>
+
+<h3><strong>Table 1. Echocardiographic acquisition contexts in which diastolic function parameters are not suitable for interpretation using the Diastolic Dysfunction Bedside Tool</strong></h3>
+
+<p class="small"><em>This exclusion applies to the context in which echocardiographic parameters were obtained. Echocardiographic data acquired previously under stable physiological conditions may be interpreted using the tool, even if the patient is currently unstable.</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Domain</th>
+      <th>Appropriate for use</th>
+      <th>Not appropriate for use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Physiological state at time of acquisition</td>
+      <td>Resting or near-resting conditions</td>
+      <td>Acute haemodynamic instability, shock</td>
+    </tr>
+    <tr>
+      <td>Loading conditions</td>
+      <td>Stable preload and afterload</td>
+      <td>Rapidly changing preload/afterload, escalating vasoactive support</td>
+    </tr>
+    <tr>
+      <td>Rhythm context</td>
+      <td>Sinus rhythm; atrial fibrillation (adapted logic)</td>
+      <td>Ventricular arrhythmias</td>
+    </tr>
+    <tr>
+      <td>Ventilatory status</td>
+      <td>Stable spontaneous breathing or ventilation</td>
+      <td>Acute changes in ventilatory support</td>
+    </tr>
+    <tr>
+      <td>Purpose of echo</td>
+      <td>Diagnostic or follow-up assessment</td>
+      <td>Immediate haemodynamic decision-making</td>
+    </tr>
+    <tr>
+      <td>Use of tool</td>
+      <td>Interpretation of reported parameters</td>
+      <td>Use during image acquisition or as a substitute for formal reporting</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>List of Abbreviations</h2>
+
+<p class="small">
+AF – atrial fibrillation<br>
+DT – deceleration time<br>
+e′ – early diastolic mitral annular velocity<br>
+E/A – ratio of early (E) to late (A) mitral inflow velocity<br>
+E/e′ – ratio of mitral inflow E velocity to average e′ velocity<br>
+ESC – European Society of Cardiology<br>
+HFpEF – heart failure with preserved ejection fraction<br>
+LA – left atrium / left atrial<br>
+LAP – left atrial pressure<br>
+LAVI – left atrial volume index<br>
+LVEF – left ventricular ejection fraction<br>
+LV – left ventricle / left ventricular<br>
+MDT – multidisciplinary team<br>
+MR – mitral regurgitation<br>
+PASP – pulmonary artery systolic pressure<br>
+TR – tricuspid regurgitation<br>
+TR Vmax – maximum tricuspid regurgitant velocity
+</p>
+
+<h2>4. Clinical and Echocardiographic Context</h2>
+
+<p>Diastolic dysfunction reflects abnormalities in myocardial relaxation, passive stiffness, and ventricular–atrial interaction. These processes lead to elevation of filling pressures initially during exertion and, with disease progression, at rest. Chronic elevation of LAP results in left atrial remodelling, pulmonary venous hypertension, and secondary pulmonary vascular changes.⁵–⁷</p>
+
+<p>Echocardiographic indices of diastolic function are indirect surrogates of these processes and are influenced by loading conditions, heart rate, rhythm, vasoactive therapy, and ventilatory support. Consequently, guideline statements consistently emphasise corroboration across multiple parameters and caution against interpretation during acute haemodynamic perturbation.¹,⁴</p>
+
+<h2>5. Echocardiographic Assessment of Diastolic Function</h2>
+
+<p>Standard echocardiographic assessment includes transmitral inflow velocities, tissue Doppler indices, left atrial size and function, and pulmonary pressure surrogates.</p>
+
+<h3><strong>Table 2. Echocardiographic parameters used</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Physiological meaning</th>
+      <th>Key limitation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mitral E/A</td>
+      <td>LV filling pattern</td>
+      <td>Load dependent</td>
+    </tr>
+    <tr>
+      <td>Deceleration time</td>
+      <td>LV compliance</td>
+      <td>Heart-rate dependent</td>
+    </tr>
+    <tr>
+      <td>e′ velocity</td>
+      <td>Myocardial relaxation</td>
+      <td>Angle and signal quality</td>
+    </tr>
+    <tr>
+      <td>Average E/e′</td>
+      <td>Filling pressure surrogate</td>
+      <td>Less reliable in MR/AF</td>
+    </tr>
+    <tr>
+      <td>LAVI</td>
+      <td>Chronic LAP burden</td>
+      <td>Time-integrated</td>
+    </tr>
+    <tr>
+      <td>TR Vmax / PASP</td>
+      <td>Pulmonary pressure</td>
+      <td>TR signal dependent</td>
+    </tr>
+    <tr>
+      <td>LA strain</td>
+      <td>LA compliance</td>
+      <td>Limited availability</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>No single parameter is diagnostic in isolation; their value lies in concordance.</p>
+
+<h2>6. Tool Design and Logic Framework</h2>
+
+<p>The tool applies a <strong>hierarchical, multiparametric logic</strong> prioritising physiological plausibility and protection against over-classification.</p>
+
+<h3>Design principles</h3>
+
+<ul>
+  <li>Conservative inference</li>
+  <li>Requirement for corroboration</li>
+  <li>Explicit handling of missing or qualitative data</li>
+  <li>Full explainability of outputs</li>
+</ul>
+
+<h3><strong>Table 3. Parameter classification</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Parameters</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Strong pressure markers</td>
+      <td>E/e′, TR/PASP, LAVI, LA strain</td>
+      <td>Primary determinants</td>
+    </tr>
+    <tr>
+      <td>Supportive markers</td>
+      <td>DT, extreme E/A</td>
+      <td>Cannot act alone</td>
+    </tr>
+    <tr>
+      <td>Qualitative surrogates</td>
+      <td>“Restrictive pattern reported”</td>
+      <td>Require corroboration</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><strong>Table 4. Minimum data thresholds</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Context</th>
+      <th>Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sinus rhythm</td>
+      <td>≥2 strong pressure markers</td>
+    </tr>
+    <tr>
+      <td>Atrial fibrillation</td>
+      <td>≥2 AF-specific markers</td>
+    </tr>
+    <tr>
+      <td>Grading</td>
+      <td>E velocity + E/A (or restrictive pattern)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Failure to meet these thresholds results in an <strong>Indeterminate</strong> output by design.</p>
+
+<p><strong>Methods clarification (inserted):</strong><br>
+<em>Where both septal and lateral e′ velocities are available, the tool calculates an averaged e′ value for derivation of E/e′; if one or both e′ measurements are absent, E/e′ is not derived and the tool proceeds using alternative independent pressure markers with appropriate downgrading of confidence.</em>
+</p>
+
+<h2>7. Special Populations and Constraints</h2>
+
+<p>Formal diastolic grading is unreliable in:</p>
+
+<ul>
+  <li>Atrial fibrillation</li>
+  <li>Significant mitral valve disease or prior repair</li>
+  <li>Pacing rhythms</li>
+  <li>Tachycardia with E–A fusion</li>
+</ul>
+
+<p>In these settings, the tool suppresses or de-emphasises grading and focuses on LAP estimation, consistent with guideline cautions.¹,⁸</p>
+
+<h2>8. Output Structure and Interpretation</h2>
+
+<p>The tool produces three outputs:</p>
+
+<ol>
+  <li><strong>Estimated resting LAP</strong> (Normal / Increased / Indeterminate)</li>
+  <li><strong>Diastolic grade</strong>, where appropriate</li>
+  <li><strong>Narrative mini-report</strong> summarising inputs and reasoning</li>
+</ol>
+
+<h3><strong>Table 5. Output interpretation</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Output</th>
+      <th>Meaning</th>
+      <th>Clinical implication</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Normal LAP</td>
+      <td>No evidence of elevated pressure</td>
+      <td>Consider non-cardiac causes</td>
+    </tr>
+    <tr>
+      <td>Increased LAP</td>
+      <td>Likely elevated filling pressure</td>
+      <td>Supports HF physiology</td>
+    </tr>
+    <tr>
+      <td>Indeterminate</td>
+      <td>Insufficient or discordant data</td>
+      <td>Further assessment required</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>“Indeterminate” is a <strong>protective outcome</strong>, not a failure.</p>
+
+<h2>9. Confidence Scoring and Explainability</h2>
+
+<p>Rather than binary conclusions, the tool assigns a <strong>confidence level</strong> based on:</p>
+
+<ul>
+  <li>Data quality</li>
+  <li>Rhythm suitability</li>
+  <li>Parameter concordance</li>
+  <li>Completeness of information</li>
+</ul>
+
+<h3><strong>Table 6. Confidence levels</strong></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Confidence</th>
+      <th>Characteristics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>High</td>
+      <td>Concordant markers, good data quality</td>
+    </tr>
+    <tr>
+      <td>Moderate</td>
+      <td>Partial concordance or recognised limitations</td>
+    </tr>
+    <tr>
+      <td>Low</td>
+      <td>Missing data, poor quality, major constraints</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This approach replaces false precision with transparent uncertainty.</p>
+
+<h2>10. Why Sensitivity and Specificity Are Not Applicable</h2>
+
+<p>Diastolic dysfunction lacks a single gold-standard comparator. Invasive haemodynamics are context-dependent and not routinely available, while echocardiographic parameters are probabilistic and heterogeneous.¹,⁹ Traditional diagnostic accuracy metrics are therefore inappropriate for this class of interpretive tool.</p>
+
+<p>Instead, the tool prioritises <strong>explainability, uncertainty handling, and conservative inference</strong>, with confidence scoring reflecting real-world clinical reasoning.</p>
+
+<h2>11. Clinical Limitations and Acquisition Context</h2>
+
+<p>Patients may have underlying diastolic dysfunction during acute haemodynamic instability or shock. However, <strong>echocardiographic parameters acquired during such states are often profoundly influenced by transient loading conditions, vasoactive therapy, heart rate, and ventilatory support</strong>, and may not reliably reflect resting diastolic physiology.</p>
+
+<p>Accordingly, <strong>echocardiographic parameters obtained during acute haemodynamic instability should not be interpreted using this tool</strong>. Previously acquired echocardiographic data obtained under stable physiological conditions may be interpreted, even if the patient is currently unstable, provided those data remain clinically relevant.</p>
+
+<h2>12. Governance, Safety, and Version Control</h2>
+
+<p>The tool is versioned, archived, and updated conservatively in alignment with evolving evidence and guideline recommendations. Prior validated versions are preserved. The design aligns with digital clinical safety and governance principles.</p>
+
+<h2>13. Disclaimer</h2>
+
+<p>This tool is a <strong>clinical decision-support aid</strong>. It does not replace clinician judgement, formal echocardiography reporting, or invasive assessment where indicated. Responsibility for clinical decisions remains with the treating clinician.</p>
+
+<h2>References (BMJ style)</h2>
+
+<ol>
+  <li>Nagueh SF, Smiseth OA, Appleton CP, Byrd BF III, Dokainish H, Edvardsen T, et al. Recommendations for the evaluation of left ventricular diastolic function by echocardiography. <em>J Am Soc Echocardiogr</em> 2016;29:277–314.</li>
+  <li>Ommen SR, Nishimura RA, Appleton CP, Miller FA, Oh JK, Redfield MM, Tajik AJ. <em>Circulation</em> 2000;102:1788–94.</li>
+  <li>Dokainish H, Zoghbi WA, Lakkis NM, et al. <em>Circulation</em> 2005;112:1446–54.</li>
+  <li>Pieske B, Tschöpe C, de Boer RA, et al. <em>Eur Heart J</em> 2019;40:3297–3317.</li>
+  <li>Borlaug BA, Paulus WJ. <em>Eur Heart J</em> 2011;32:670–9.</li>
+  <li>Borlaug BA, Nishimura RA, Sorajja P, et al. <em>Circ Heart Fail</em> 2010;3:588–95.</li>
+  <li>Lam CSP, Roger VL, Rodeheffer RJ, et al. <em>J Am Coll Cardiol</em> 2009;53:1119–26.</li>
+  <li>McDonagh TA, Metra M, Adamo M, et al. <em>Eur Heart J</em> 2021;42:3599–3726.</li>
+  <li>Reddy YNV, Carter RE, Obokata M, et al. <em>Circulation</em> 2018;138:861–70.</li>
+  <li>Obokata M, Reddy YNV, Borlaug BA. <em>J Am Coll Cardiol</em> 2020;75:275–89.</li>
+  <li>Morris DA, Takeuchi M, Krisper M, et al. <em>J Am Soc Echocardiogr</em> 2015;28:228–38.</li>
+  <li>Freed BH, Daruwalla V, Cheng JY, et al. <em>J Am Coll Cardiol</em> 2016;68:1643–55.</li>
+</ol>
+
+<footer>
+<p>
+<strong>Locked status:</strong> This is the complete locked fallback governance document (v1.0), reproduced in full.<br>
+© Dr Prabhath Fernando MBBS MD FRCP.
+</p>
+</footer>
+
+</div>
+</body>
+</html>
