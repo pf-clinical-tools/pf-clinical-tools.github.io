@@ -51,7 +51,7 @@
     color: #333;
   }
 
-  /* One unified “button” look for BOTH <a> and <button> */
+  /* Same look for BOTH <a> and <button> so appearance stays consistent */
   .tool a,
   .tool button.toolbtn {
     display: inline-block;
@@ -100,10 +100,11 @@
 
 <script>
   // Opens in new tab; if blocked, falls back to same-tab.
+  // (Crucially: tool launches are buttons, so the hub cannot navigate away.)
   function openTool(url){
     try{
       const w = window.open(url, "_blank", "noopener");
-      if(!w) window.location.href = url; // popup blocked fallback
+      if(!w) window.location.href = url; // popup blocker fallback
     } catch(e){
       window.location.href = url;
     }
@@ -130,7 +131,6 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     <strong>non-valvular atrial fibrillation</strong>, using structured, guideline-aligned prompts.
     Designed to support balanced, conservative decision-making where bleeding risk or uncertainty exists.
   </p>
-  <!-- ✅ Button cannot navigate the hub tab -->
   <button type="button" class="toolbtn"
           onclick="openTool('https://pf-clinical-tools.github.io/nvaf-anticoagulation/');">
     Open Anticoagulation Risk Assessment Tool (NVAF)
@@ -144,7 +144,6 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     echocardiographic parameters, with emphasis on <strong>confidence estimation and clinical context</strong>.
     Intended for clinicians assessing unexplained dyspnoea or suspected heart failure.
   </p>
-  <!-- ✅ Button cannot navigate the hub tab -->
   <button type="button" class="toolbtn"
           onclick="openTool('https://pf-clinical-tools.github.io/diastolic-dysfunction/');">
     Open Diastolic Dysfunction Assessment Tool
@@ -158,7 +157,6 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     catheterisation and <strong>trial without catheter (TWOC)</strong> in patients with femoral or pelvic fractures.
     Focuses on minimising unnecessary catheter use while reducing catheter-associated harm.
   </p>
-  <!-- ✅ Button cannot navigate the hub tab -->
   <button type="button" class="toolbtn"
           onclick="openTool('https://pf-clinical-tools.github.io/catheter-twoc-femoral-pelvic/');">
     Open Catheterisation &amp; TWOC Decision Aid
@@ -172,7 +170,7 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
     in patients with acute pulmonary embolism or deep vein thrombosis who require urgent femoral fracture surgery.
     Designed to support multidisciplinary peri-operative decision-making.
   </p>
-  <!-- Leave placeholder as a normal link so you can detect it's not set yet -->
+  <!-- Keep as a normal link until you have the real URL -->
   <a href="PASTE_PEDVT_TOOL_LINK_HERE" target="_blank" rel="noopener">
     Open Peri-operative PE / DVT Decision Support Tool
   </a>
