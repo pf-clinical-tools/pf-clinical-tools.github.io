@@ -61,7 +61,7 @@
     color: #333;
   }
 
-  /* Same look for BOTH <a> and <button> */
+  /* Same appearance for governance links (<a>) and tool buttons (<button>) */
   .tool a,
   .tool button.toolbtn {
     display: inline-block;
@@ -109,7 +109,7 @@
 </style>
 
 <script>
-  // Attempt to open in a new tab. NEVER navigate the hub away.
+  // Attempt to open in a new tab. The hub NEVER navigates away.
   function openTool(url){
     const w = window.open(url, "_blank", "noopener");
     if(!w){
@@ -117,9 +117,9 @@
       if(note){
         note.style.display = "block";
         note.innerHTML =
-          "<b>New tab was blocked by your browser.</b><br>" +
-          "This hub cannot override that security setting. " +
-          "Please allow pop-ups/new windows for <b>pf-clinical-tools.github.io</b> (or disable any extension/policy that forces same-tab).";
+          "<b>Your browser blocked opening a new tab.</b><br>" +
+          "The hub will stay open. To allow new tabs, enable pop-ups/new windows for <b>pf-clinical-tools.github.io</b> " +
+          "(or right-click the button and choose <b>Open link in new tab</b>).";
       }
     }
   }
@@ -145,6 +145,7 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
   <p>
     Assists clinicians in assessing <strong>stroke risk and anticoagulation considerations</strong> in patients with
     <strong>non-valvular atrial fibrillation</strong>, using structured, guideline-aligned prompts.
+    Designed to support balanced, conservative decision-making where bleeding risk or uncertainty exists.
   </p>
   <button type="button" class="toolbtn"
           onclick="openTool('https://pf-clinical-tools.github.io/nvaf-anticoagulation/');">
@@ -157,6 +158,7 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
   <p>
     Provides a structured bedside approach to <strong>grading diastolic dysfunction</strong> using standard
     echocardiographic parameters, with emphasis on <strong>confidence estimation and clinical context</strong>.
+    Intended for clinicians assessing unexplained dyspnoea or suspected heart failure.
   </p>
   <button type="button" class="toolbtn"
           onclick="openTool('https://pf-clinical-tools.github.io/diastolic-dysfunction/');">
@@ -168,7 +170,8 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
   <h2>3. Peri-operative Catheterisation and TWOC Decision Aid in Femoral and Pelvic Fracture Patients</h2>
   <p>
     Supports nursing and medical staff in making <strong>safe, auditable decisions</strong> regarding urinary
-    catheterisation and <strong>trial without catheter (TWOC)</strong>.
+    catheterisation and <strong>trial without catheter (TWOC)</strong> in patients with femoral or pelvic fractures.
+    Focuses on minimising unnecessary catheter use while reducing catheter-associated harm.
   </p>
   <button type="button" class="toolbtn"
           onclick="openTool('https://pf-clinical-tools.github.io/catheter-twoc-femoral-pelvic/');">
@@ -180,7 +183,8 @@ Use within appropriate clinical governance frameworks and escalate where uncerta
   <h2>4. Peri-operative PE / DVT Management Decision Support Tool (Femoral Fractures)</h2>
   <p>
     Provides a structured framework to help clinicians <strong>balance thrombotic and bleeding risks</strong>
-    in patients requiring urgent femoral fracture surgery.
+    in patients with acute pulmonary embolism or deep vein thrombosis who require urgent femoral fracture surgery.
+    Designed to support multidisciplinary peri-operative decision-making.
   </p>
   <a href="PASTE_PEDVT_TOOL_LINK_HERE" target="_blank" rel="noopener">
     Open Peri-operative PE / DVT Decision Support Tool
