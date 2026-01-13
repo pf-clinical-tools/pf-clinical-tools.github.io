@@ -29,16 +29,18 @@
     background: #fff3cd;
     border-left: 5px solid #ffcc00;
     padding: 12px 15px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     font-size: 0.95em;
   }
 
-  .howto {
-    background: #e7f1ff;
-    border-left: 5px solid #005eb8;
-    padding: 12px 15px;
-    margin-bottom: 24px;
-    font-size: 0.95em;
+  .popupNote{
+    display:none;
+    background:#fdecea;
+    border-left:5px solid #b42318;
+    padding:12px 15px;
+    margin-bottom:18px;
+    font-size:0.95em;
+    color:#4a0d0d;
   }
 
   .tool {
@@ -59,7 +61,9 @@
     color: #333;
   }
 
-  .tool a {
+  /* Same look for BOTH <a> and <button> */
+  .tool a,
+  .tool button.toolbtn {
     display: inline-block;
     padding: 10px 16px;
     background: #005eb8;
@@ -67,9 +71,13 @@
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
+    border: none;
+    cursor: pointer;
+    font: inherit;
   }
 
-  .tool a:hover {
+  .tool a:hover,
+  .tool button.toolbtn:hover {
     background: #003f87;
   }
 
@@ -99,6 +107,24 @@
     text-align: center;
   }
 </style>
+
+<script>
+  // Attempt to open in a new tab. NEVER navigate the hub away.
+  function openTool(url){
+    const w = window.open(url, "_blank", "noopener");
+    if(!w){
+      const note = document.getElementById("popupNote");
+      if(note){
+        note.style.display = "block";
+        note.innerHTML =
+          "<b>New tab was blocked by your browser.</b><br>" +
+          "This hub cannot override that security setting. " +
+          "Please allow pop-ups/new windows for <b>pf-clinical-tools.github.io</b> (or disable any extension/policy that forces same-tab).";
+      }
+    }
+  }
+</script>
+
 </head>
 
 <body>
@@ -112,21 +138,18 @@ They <strong>do not replace clinical judgement</strong>, local policy, or specia
 Use within appropriate clinical governance frameworks and escalate where uncertainty or patient-specific factors exist.
 </div>
 
-<div class="howto">
-<strong>Tip:</strong> Tools open in a new tab on desktop browsers. If your browser is configured to open links in the same tab,
-use right-click → <strong>Open link in new tab</strong> (or long-press on mobile).
-</div>
+<div id="popupNote" class="popupNote"></div>
 
 <div class="tool">
   <h2>1. Anticoagulation Risk Assessment Tool in NVAF</h2>
   <p>
     Assists clinicians in assessing <strong>stroke risk and anticoagulation considerations</strong> in patients with
     <strong>non-valvular atrial fibrillation</strong>, using structured, guideline-aligned prompts.
-    Designed to support balanced, conservative decision-making where bleeding risk or uncertainty exists.
   </p>
-  <a href="https://pf-clinical-tools.github.io/nvaf-anticoagulation/" target="_blank" rel="noopener">
+  <button type="button" class="toolbtn"
+          onclick="openTool('https://pf-clinical-tools.github.io/nvaf-anticoagulation/');">
     Open Anticoagulation Risk Assessment Tool (NVAF)
-  </a>
+  </button>
 </div>
 
 <div class="tool">
@@ -134,31 +157,30 @@ use right-click → <strong>Open link in new tab</strong> (or long-press on mobi
   <p>
     Provides a structured bedside approach to <strong>grading diastolic dysfunction</strong> using standard
     echocardiographic parameters, with emphasis on <strong>confidence estimation and clinical context</strong>.
-    Intended for clinicians assessing unexplained dyspnoea or suspected heart failure.
   </p>
-  <a href="https://pf-clinical-tools.github.io/diastolic-dysfunction/" target="_blank" rel="noopener">
+  <button type="button" class="toolbtn"
+          onclick="openTool('https://pf-clinical-tools.github.io/diastolic-dysfunction/');">
     Open Diastolic Dysfunction Assessment Tool
-  </a>
+  </button>
 </div>
 
 <div class="tool">
   <h2>3. Peri-operative Catheterisation and TWOC Decision Aid in Femoral and Pelvic Fracture Patients</h2>
   <p>
     Supports nursing and medical staff in making <strong>safe, auditable decisions</strong> regarding urinary
-    catheterisation and <strong>trial without catheter (TWOC)</strong> in patients with femoral or pelvic fractures.
-    Focuses on minimising unnecessary catheter use while reducing catheter-associated harm.
+    catheterisation and <strong>trial without catheter (TWOC)</strong>.
   </p>
-  <a href="https://pf-clinical-tools.github.io/catheter-twoc-femoral-pelvic/" target="_blank" rel="noopener">
+  <button type="button" class="toolbtn"
+          onclick="openTool('https://pf-clinical-tools.github.io/catheter-twoc-femoral-pelvic/');">
     Open Catheterisation &amp; TWOC Decision Aid
-  </a>
+  </button>
 </div>
 
 <div class="tool">
   <h2>4. Peri-operative PE / DVT Management Decision Support Tool (Femoral Fractures)</h2>
   <p>
     Provides a structured framework to help clinicians <strong>balance thrombotic and bleeding risks</strong>
-    in patients with acute pulmonary embolism or deep vein thrombosis who require urgent femoral fracture surgery.
-    Designed to support multidisciplinary peri-operative decision-making.
+    in patients requiring urgent femoral fracture surgery.
   </p>
   <a href="PASTE_PEDVT_TOOL_LINK_HERE" target="_blank" rel="noopener">
     Open Peri-operative PE / DVT Decision Support Tool
