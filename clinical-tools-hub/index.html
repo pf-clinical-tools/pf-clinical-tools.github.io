@@ -13,17 +13,8 @@
     color: #111;
     line-height: 1.5;
   }
-
-  .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 1.9em;
-    margin-bottom: 0.2em;
-  }
+  .container { max-width: 900px; margin: auto; padding: 20px; }
+  h1 { font-size: 1.9em; margin-bottom: 0.2em; }
 
   .disclaimer {
     background: #fff3cd;
@@ -51,15 +42,8 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   }
 
-  .tool h2 {
-    font-size: 1.25em;
-    margin-top: 0;
-  }
-
-  .tool p {
-    margin-bottom: 14px;
-    color: #333;
-  }
+  .tool h2 { font-size: 1.25em; margin-top: 0; }
+  .tool p { margin-bottom: 14px; color: #333; }
 
   /* Same appearance for governance links (<a>) and tool buttons (<button>) */
   .tool a,
@@ -88,17 +72,9 @@
     margin-top: 18px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
   }
+  .section h2 { font-size: 1.2em; margin-top: 0; }
 
-  .section h2 {
-    font-size: 1.2em;
-    margin-top: 0;
-  }
-
-  .notes {
-    font-size: 0.9em;
-    color: #444;
-    margin-top: 22px;
-  }
+  .notes { font-size: 0.9em; color: #444; margin-top: 22px; }
 
   footer {
     margin-top: 40px;
@@ -109,7 +85,7 @@
 </style>
 
 <script>
-  // Attempt to open in a new tab. The hub NEVER navigates away.
+  // Attempts to open in a new tab. The hub NEVER navigates away.
   function openTool(url){
     const w = window.open(url, "_blank", "noopener");
     if(!w){
@@ -119,7 +95,7 @@
         note.innerHTML =
           "<b>Your browser blocked opening a new tab.</b><br>" +
           "The hub will stay open. To allow new tabs, enable pop-ups/new windows for <b>pf-clinical-tools.github.io</b> " +
-          "(or right-click the button and choose <b>Open link in new tab</b>).";
+          "(or right-click and choose <b>Open link in new tab</b>).";
       }
     }
   }
